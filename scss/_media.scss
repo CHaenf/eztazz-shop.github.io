@@ -1,0 +1,53 @@
+@media (max-width: 1170px) {
+    header strong {
+        font-size: 20vw;
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+    .materials__benefit {
+        max-width: 100%;
+        width: 100%;
+        max-height: min-content;
+    }
+}
+@media (max-width: 800px) {
+    .centered {
+        padding-top: 1rem;
+        transform: translateX(-50%);
+    }
+    .header_buttons {
+        margin-top: 10rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 2;
+    }
+    .men_woman {
+        flex-wrap: wrap;
+    }
+    .for_woman,
+    .for_man {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .materials__title {
+        line-height: 6rem;
+    }
+    .materials__benefit4 {
+        min-height: 63rem;
+    }
+    .newsModal {
+        max-width: auto;
+        width: 100%;
+    }
+    .header_buttons {
+        &--footer {
+            display: none;
+        }
+    }
+}

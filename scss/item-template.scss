@@ -1,0 +1,58 @@
+.item {
+    margin-top: 15rem;
+    display: flex;
+}
+
+.image {
+    width: 60%;
+    height: 60rem;
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+header {
+    position: relative;
+}
+.description {
+    padding: 4rem 3rem;
+    width: 40%;
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+    button {
+        background-color: #676767;
+        border: none;
+        font-size: 2rem;
+        padding: 2rem 4rem;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+@media (max-width: 950px) {
+    .item {
+        flex-direction: column;
+    }
+    .image,
+    .description {
+        width: 100%;
+    }
+    .image {
+        height: calc(100% - 20rem);
+    }
+}

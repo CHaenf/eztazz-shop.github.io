@@ -1,0 +1,144 @@
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    background: transparent;
+}
+
+.footer {
+    height: 100vh;
+    padding-top: 7rem;
+    position: relative;
+
+    hr {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #ccc;
+        margin-bottom: 4rem;
+    }
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 17rem;
+        align-items: center;
+        row-gap: 4rem;
+    }
+    button {
+        background: none;
+
+        cursor: pointer;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    li {
+        margin-bottom: 1rem;
+    }
+    &__news {
+        display: flex;
+        justify-content: center;
+        column-gap: 0.6rem;
+        min-width: 19rem;
+        align-items: center;
+        height: max-content;
+        border: none;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+    img {
+        width: 1.6rem;
+        height: 1.6rem;
+        line-height: 1.4rem;
+    }
+    &__really {
+        max-width: 20rem;
+        border: none;
+        border-bottom: 0.2rem solid #fff;
+        cursor: pointer;
+
+        font-size: 2rem;
+    }
+    &__links {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        svg {
+            width: 3rem;
+            height: 3rem;
+            transition: fill 0.5s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
+.newsModal {
+    transform: translateX(105%);
+    transition: all 0.4s;
+    position: fixed;
+    max-width: 76.8rem;
+    top: 0;
+    right: 0;
+    z-index: 778;
+    background-color: #000;
+    height: 100%;
+    padding: 15rem 6rem;
+    opacity: 0;
+
+    &__content {
+        height: 100%;
+        h4 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            border-bottom: 0.2rem solid #fff;
+            width: max-content;
+        }
+        input {
+            background: none;
+            color: #fff;
+            font-size: 4.2rem;
+            background-color: #000;
+            border: none;
+            margin-bottom: 5rem;
+            border-bottom: 0.2rem solid #fff;
+        }
+        input::placeholder {
+            background-color: #000;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            max-width: 30rem;
+            font-size: 4.2rem;
+            border: none;
+            text-align: left;
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        font-size: 3rem;
+        border: none;
+    }
+}
+.showNews {
+    transform: translateX(0);
+    opacity: 1;
+    filter: none;
+}
+
+.overflowModal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 777;
+    backdrop-filter: blur(5px) !important;
+    transition: all 0.4s;
+}
+.hidden {
+    display: none;
+}
