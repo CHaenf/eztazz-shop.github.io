@@ -93,7 +93,7 @@ async function displayClothes() {
 
         clothesCard.innerHTML = `
             <a  href="/clothe_pages/item-template.html?item=${doc.id}">
-                <img src="${data.img}" alt="${data.Name}" class="clothes__card--img">
+                <img src="..${data.img}" alt="${data.Name}" class="clothes__card--img">
                 <div class="clothes__card--content">
                     <h3>${data.Name}</h3>
                     <p>$${data.Cost}</p>
@@ -152,8 +152,8 @@ if (isUserAuthenticated()) {
             const cartItem = document.createElement("div");
             cartItem.className = "Cart__item";
             cartItem.innerHTML = `
-            <a href="/clothe_pages/item-template.html?item=${itemDoc.id}">
-                <img class="Cart__image" src="${data.img}" alt="img">
+            <a href="./item-template.html?item=${itemDoc.id}">
+                <img class="Cart__image" src="..${data.img}" alt="img">
                 <div class="Cart__content">
                     <h4>${data.Name}</h4>
                     <p>$${data.Cost}</p>

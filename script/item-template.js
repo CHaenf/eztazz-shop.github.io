@@ -53,8 +53,8 @@ if (isUserAuthenticated()) {
             const cartItem = document.createElement("div");
             cartItem.className = "Cart__item";
             cartItem.innerHTML = `
-            <a href="/clothe_pages/item-template.html?item=${itemDoc.id}">
-                <img class="Cart__image" src="${data.img}" alt="img">
+            <a href="../clothe_pages/item-template.html?item=${itemDoc.id}">
+                <img class="Cart__image" src="..${data.img}" alt="img">
                 <div class="Cart__content">
                     <h4>${data.Name}</h4>
                     <p>$${data.Cost}</p>
@@ -110,7 +110,7 @@ function loadItem(itemId) {
         item.innerHTML = "";
         item.innerHTML = `
         <div class="image">
-        <img src="${data.img}" alt="IMAGE">
+        <img src="..${data.img}" alt="IMAGE">
         </div>
      <div class="description">
         <h1>${data.Name}</h1>

@@ -52,7 +52,7 @@ if (isUserAuthenticated()) {
             const cartItem = document.createElement("div");
             cartItem.className = "cart__card";
             cartItem.innerHTML = `
-            <img src="${data.img}" alt="image">
+            <img src="..${data.img}" alt="image">
                                <button data-item-id="${itemDoc.id}" class="cart__card--btn">&#128937;</button>
                                 <div class="cart__card--content">
                                     <a href="/clothe_pages/${itemDoc.id}" class="cart__card--name">${data.Name}</a>
@@ -65,15 +65,6 @@ if (isUserAuthenticated()) {
             document.getElementById("total").textContent = `Total: ${totalCost}$`;
             cartItems.appendChild(cartItem);
         }
-        // } else {
-        //     const cartItems = document.querySelector(".cart__grid");
-        //     const noCartItems = document.createElement("div");
-        //     noCartItems.className = "Cart__Noitems";
-        //     cartItems.appendChild(noCartItems);
-        //     noCartItems.textContent = "No items in cart";
-        //     document.querySelector(".Total__count").style.display = "none";
-        //     document.querySelector(".Cart__link").style.display = "none";
-        // }
     }
 }
 

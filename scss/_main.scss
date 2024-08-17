@@ -15,7 +15,7 @@ a {
 }
 @font-face {
     font-family: "font";
-    src: url("/fonts/header_font.ttf") format("truetype");
+    src: url("../fonts/header_font.ttf") format("truetype");
 }
 @keyframes header {
     from {
@@ -503,16 +503,16 @@ hr {
     }
 
     &__benefit1 {
-        background: url(/img/benefit__img.jpg);
+        background: url(../img/benefit__img.jpg);
     }
     &__benefit2 {
-        background: url(/img/manekens.jpg);
+        background: url(../img/manekens.jpg);
     }
     &__benefit3 {
-        background: url(/img/premiun_customers.jpg);
+        background: url(../img/premiun_customers.jpg);
     }
     &__benefit4 {
-        background: url(/img/eco_friendly.jpg);
+        background: url(../img/eco_friendly.jpg);
     }
 
     &__benefit {

@@ -68,12 +68,12 @@ export function ShowHeaderAccount() {
             showAccount.classList.add("signed");
             showAccount.innerHTML = `
             <li>${storedEmail}</li>
-            <li><a href="/clothe_pages/settings.html">Settings</a></li>
+            <li><a href="./clothe_pages/settings.html">Settings</a></li>
             <li><button onclick="logout()">Log Out</button></li>
             `;
         } else {
-            showAccount.innerHTML = `<li><a href="/clothe_pages/login.html">Log In</a></li>
-            <li><a href="/clothe_pages/login.html">Sign Up</a></li>
+            showAccount.innerHTML = `<li><a href="./clothe_pages/login.html">Log In</a></li>
+            <li><a href="./clothe_pages/login.html">Sign Up</a></li>
             `;
         }
     });
@@ -148,8 +148,8 @@ export async function showCartContent() {
                 const cartItem = document.createElement("div");
                 cartItem.className = "Cart__item";
                 cartItem.innerHTML = `
-                <a href="/clothe_pages/item-template.html?item=${itemDoc.id}">
-                    <img class="Cart__image" src="${data.img}" alt="img">
+                <a href="./clothe_pages/item-template.html?item=${itemDoc.id}">
+                    <img class="Cart__image" src=".${data.img}" alt="img">
                     <div class="Cart__content">
                         <h4>${data.Name}</h4>
                         <p>$${data.Cost}</p>

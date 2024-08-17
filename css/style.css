@@ -23,7 +23,7 @@ a {
 
 @font-face {
   font-family: "font";
-  src: url("/fonts/header_font.ttf") format("truetype");
+  src: url("../fonts/header_font.ttf") format("truetype");
 }
 @keyframes header {
   from {
@@ -537,16 +537,16 @@ hr {
   gap: 2rem;
 }
 .materials__benefit1 {
-  background: url(/img/benefit__img.jpg);
+  background: url(../img/benefit__img.jpg);
 }
 .materials__benefit2 {
-  background: url(/img/manekens.jpg);
+  background: url(../img/manekens.jpg);
 }
 .materials__benefit3 {
-  background: url(/img/premiun_customers.jpg);
+  background: url(../img/premiun_customers.jpg);
 }
 .materials__benefit4 {
-  background: url(/img/eco_friendly.jpg);
+  background: url(../img/eco_friendly.jpg);
 }
 .materials__benefit {
   background-blend-mode: multiply;
