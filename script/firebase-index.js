@@ -91,7 +91,7 @@ showCart.addEventListener("mouseover", function () {
         cart.style.visibility = "hidden";
     });
 });
-const showAccountLink = document.querySelector(".account");
+export const showAccountLink = document.querySelector(".account");
 showAccountLink.addEventListener("mouseover", function () {
     showAccount.style.visibility = "visible";
     showAccount.style.top = "4rem";
@@ -197,3 +197,10 @@ export function showHeaderAccount() {
         }
     });
 }
+showAccountLink.addEventListener("click", () => {
+    if (isUserAuthenticated()) {
+        location.replace("./account.html");
+    } else {
+        location.replace("./login.html");
+    }
+});

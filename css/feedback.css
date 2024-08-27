@@ -191,4 +191,74 @@ main {
   background: rgb(60, 60, 60);
   background: linear-gradient(90deg, rgb(60, 60, 60) 6%, rgb(107, 107, 107) 15%, rgb(107, 107, 107) 32%, rgb(60, 60, 60) 41%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c3c3c",endColorstr="#3c3c3c",GradientType=1);
+}
+
+.settings {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 70rem;
+  text-align: center;
+}
+.settings h1 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+.settings ul li {
+  border-bottom: 0.2rem solid #fff;
+  margin-bottom: 3rem;
+}
+.settings ul li button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  border: none;
+  background: none;
+}
+.settings ul li a {
+  font-size: 2.5rem;
+}
+.settings ul li::marker {
+  content: "";
+}
+.settings ul h3 {
+  font-size: 2.5rem;
+}
+.settings__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  max-width: 50rem;
+  width: 100%;
+  background-color: #3b3b3b;
+  padding: 2rem;
+  border-radius: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.settings__modal label {
+  font-size: 2rem;
+}
+.settings__modal input {
+  font-size: 2rem;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+}
+.settings__modal h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+.settings__modal--buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.settings__modal--buttons button {
+  font-size: 2rem;
+  background: none;
+  cursor: pointer;
+  border: none;
 }/*# sourceMappingURL=feedback.css.map */

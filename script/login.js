@@ -13,15 +13,6 @@ import {
     doc,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-// Logo animation
-// window.onload = function() {
-//     setTimeout(function() {
-//         let logo__a = document.getElementById('logo__a');
-//         let logo  = document.getElementById('logo');
-//         logo.classList.add('centered');
-//         logo__a.classList.add('centered');
-//     }, 777);
-// };
 // Initialize Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBKB3E5gCcdUuxtdHNBWLvGM29yPRTubVs",

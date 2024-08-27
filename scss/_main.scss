@@ -250,7 +250,8 @@ header strong {
     &__link {
         position: relative;
         display: inline-block;
-
+        font-size: 1.8rem;
+        cursor: pointer;
         &::before {
             content: "";
             position: absolute;
@@ -680,6 +681,7 @@ hr {
     scroll-snap-align: start;
 }
 .modal {
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;

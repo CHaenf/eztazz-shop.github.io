@@ -1,4 +1,4 @@
-import {storedEmail, storedUid, isUserAuthenticated, getCookie, cart, showHeaderAccount} from "./firebase-index.js";
+import {storedEmail, storedUid, isUserAuthenticated, getCookie, cart, showAccount} from "./firebase-index.js";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
     getFirestore,
@@ -29,7 +29,6 @@ const clothesRef = collection(db, "Clothes");
 const userRef = collection(db, "users");
 
 if (isUserAuthenticated()) {
-    showHeaderAccount();
     const clothesCartRef = doc(db, "users", storedEmail);
     const docSnap = await getDoc(clothesCartRef);
     const clothesInCart = docSnap.data().Cart;
@@ -79,6 +78,22 @@ if (isUserAuthenticated()) {
     document.querySelector(".Total__count").style.display = "none";
     document.querySelector(".Cart__link").style.display = "none";
 }
+document.addEventListener("DOMContentLoaded", () => {
+    if (isUserAuthenticated()) {
+        // Display protected content
+        showAccount.classList.add("signed");
+        showAccount.innerHTML = `
+        <li>${storedEmail}</li>
+        <li><a href="./settings.html">Settings</a></li>
+        <li><button onclick="logout()">Log Out</button></li>
+        `;
+    } else {
+        showAccount.innerHTML = `<li><a href="./login.html">Log In</a></li>
+        <li><a href="./login.html">Sign Up</a></li>
+        `;
+    }
+});
+
 const footerObserverOptions = {
     threshold: 1,
 };

@@ -119,6 +119,12 @@ h1 {
     .header_buttons {
         margin-top: 1rem;
     }
+    main {
+        margin-top: 10rem;
+    }
+    #logo {
+        z-index: -1;
+    }
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

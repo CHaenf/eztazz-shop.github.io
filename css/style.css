@@ -266,6 +266,8 @@ header strong {
 .account__link {
   position: relative;
   display: inline-block;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 .account__link::before {
   content: "";
@@ -717,6 +719,7 @@ hr {
 }
 
 .modal {
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -969,6 +972,12 @@ select:focus {
   .for_woman,
   .for_man {
     width: 100%;
+  }
+  .Cart {
+    display: none;
+  }
+  .account__content {
+    display: none;
   }
 }
 @media (max-width: 600px) {

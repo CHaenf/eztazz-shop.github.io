@@ -1,13 +1,3 @@
-// Logo animation
-// window.onload = function() {
-//     setTimeout(function() {
-//         let logo__a = document.getElementById('logo__a');
-//         let logo  = document.getElementById('logo');
-//         logo.classList.add('centered');
-//         logo__a.classList.add('centered');
-//     }, 777);
-// };
-
 // Videos auto-play and fade-out
 const videoCollection = document.querySelector(".videoCollection");
 const videoCollection__video = document.querySelector(".videoCollection__video");
@@ -34,41 +24,15 @@ videoCollection__video.addEventListener("ended", function () {
 });
 // Videos auto-play and fade-out END
 
-//Autoscroll to sections on scroll
-// document.addEventListener("DOMContentLoaded", () => {
-//     const imageOnFull = document.querySelectorAll(".scrollClass");
-//     let currentIndex = 0;
-//     let isScrolling;
-
-//     function scrollToSection(index) {
-//         if (index >= 0 && index < imageOnFull.length) {
-//             imageOnFull[index].scrollIntoView({behavior: "smooth"});
-//             currentIndex = index;
-//         }
-//     }
-
-//     window.addEventListener("wheel", (event) => {
-//         clearTimeout(isScrolling);
-//         isScrolling = setTimeout(() => {
-//             if (event.deltaY > 0) {
-//                 if (currentIndex < imageOnFull.length - 1) {
-//                     scrollToSection(currentIndex + 1);
-//                 }
-//             } else {
-//                 if (currentIndex > 0) {
-//                     scrollToSection(currentIndex - 1);
-//                 }
-//             }
-//         }, 0);
-//     });
-// });
-
 // Modal privacy policy
 const ModalPrivacy = document.querySelector(".modal");
 const CloseModal = document.querySelector(".modalClose");
 const ModalOverflow = document.querySelector(".modal-content");
-
-CloseModal.addEventListener("click", function () {
+window.addEventListener("DOMContentLoaded", () => {
+    getCookie("modalHidden") == null ? (ModalPrivacy.style.display = "block") : hidePrivacy();
+});
+CloseModal.addEventListener("click", hidePrivacy);
+function hidePrivacy() {
     ModalPrivacy.style.display = "none";
     setTimeout(function () {
         let logo__a = document.getElementById("logo__a");
@@ -76,17 +40,9 @@ CloseModal.addEventListener("click", function () {
         logo.classList.add("centered");
         logo__a.classList.add("centered");
     }, 500);
-});
-
-ModalOverflow.addEventListener("click", function () {
-    ModalPrivacy.style.display = "none";
-    setTimeout(function () {
-        let logo__a = document.getElementById("logo__a");
-        let logo = document.getElementById("logo");
-        logo.classList.add("centered");
-        logo__a.classList.add("centered");
-    }, 500);
-});
+    document.cookie = "modalHidden=true";
+}
+ModalOverflow.addEventListener("click", hidePrivacy);
 
 // Sale Timer start
 const Sale = {
@@ -195,6 +151,7 @@ import {
     showCartContent,
     showHeaderAccount,
     deleteCookie,
+    showAccountLink,
 } from "./firebase-index.js";
 
 window.onload = cartRemoveItem();

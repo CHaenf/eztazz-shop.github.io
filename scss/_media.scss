@@ -33,6 +33,12 @@
     .for_man {
         width: 100%;
     }
+    .Cart {
+        display: none;
+    }
+    .account__content {
+        display: none;
+    }
 }
 @media (max-width: 600px) {
     .materials__title {
